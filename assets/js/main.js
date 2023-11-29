@@ -71,130 +71,143 @@
     /*--
         Slider
     -----------------------------------*/
-    var slider = new Swiper('.slider-active .swiper-container', {
-        speed: 600,
-        effect: "fade",
-        loop: true,
-        pagination: {
-            el: '.slider-active .swiper-pagination',
-            clickable: true,
-        },
-        // navigation: {
-        //     nextEl: ".slider-active .swiper-button-next",
-        //     prevEl: ".slider-active .swiper-button-prev",
-        // },
-        autoplay: {
-            delay: 8000,
-        },
-    });    
-    
+    try {
+        var slider = new Swiper('.slider-active .swiper-container', {
+            speed: 600,
+            effect: "fade",
+            loop: true,
+            pagination: {
+                el: '.slider-active .swiper-pagination',
+                clickable: true,
+            },
+            // navigation: {
+            //     nextEl: ".slider-active .swiper-button-next",
+            //     prevEl: ".slider-active .swiper-button-prev",
+            // },
+            autoplay: {
+                delay: 8000,
+            },
+        });
+    }
+    catch (e) { console.log("no swiper") }
 	
 	/*--
         Testimonial
     -----------------------------------*/
-
-	var swiper = new Swiper(".testimonial-active .swiper-container", {
-		speed: 600,
-        navigation: {
-          nextEl: ".testimonial-active .swiper-button-next",
-          prevEl: ".testimonial-active .swiper-button-prev",
-        },
-	});
-
+    try {
+        var swiper = new Swiper(".testimonial-active .swiper-container", {
+            speed: 600,
+            navigation: {
+            nextEl: ".testimonial-active .swiper-button-next",
+            prevEl: ".testimonial-active .swiper-button-prev",
+            },
+        });
+    }
+    catch (e) { console.log("no swiper") }
 
 	/*--
         Brand
     -----------------------------------*/
-    var edule = new Swiper('.brand-active .swiper-container', {
-        speed: 600,
-        spaceBetween: 30,
-        loop: true,
-        breakpoints: {
-            0: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },  
-            576: {
-                slidesPerView: 4,
-            },  
-            768: {
-                slidesPerView: 4,
-            },            
-            992: {
-                slidesPerView: 5,
-            },            
-            1200: {
-                slidesPerView: 5,
-            }
-        },
-        autoplay: {
-            delay: 8000,
-        },
-    });
-    
+    try {    
+        var edule = new Swiper('.brand-active .swiper-container', {
+            speed: 600,
+            spaceBetween: 30,
+            loop: true,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },  
+                576: {
+                    slidesPerView: 4,
+                },  
+                768: {
+                    slidesPerView: 4,
+                },            
+                992: {
+                    slidesPerView: 5,
+                },            
+                1200: {
+                    slidesPerView: 5,
+                }
+            },
+            autoplay: {
+                delay: 8000,
+            },
+        });
+    }
+    catch (e) { console.log("no swiper") }
 
     /*--
         Reviews
     -----------------------------------*/
-    var edule = new Swiper('.reviews-active .swiper-container', {
-        speed: 600,
-        spaceBetween: 30,
-        loop: true,  
-        pagination: {
-            el: '.reviews-active .swiper-pagination',
-            clickable: true,
-        },      
-        autoplay: {
-            delay: 8000,
-        },
-    });
-
+    try {
+        var edule = new Swiper('.reviews-active .swiper-container', {
+            speed: 600,
+            spaceBetween: 30,
+            loop: true,  
+            pagination: {
+                el: '.reviews-active .swiper-pagination',
+                clickable: true,
+            },      
+            autoplay: {
+                delay: 8000,
+            },
+        });
+    }
+    catch (e) { console.log("no swiper") }
 
     /*--
         Student's
     -----------------------------------*/
-    var edule = new Swiper('.students-active .swiper-container', {
-        speed: 600,
-        spaceBetween: 30,        
-        navigation: {
-            nextEl: '.students-active .swiper-button-next',
-            prevEl: '.students-active .swiper-button-prev',
-        },       
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },  
-            768: {
-                slidesPerView: 2,
+    try {
+        var edule = new Swiper('.students-active .swiper-container', {
+            speed: 600,
+            spaceBetween: 30,        
+            navigation: {
+                nextEl: '.students-active .swiper-button-next',
+                prevEl: '.students-active .swiper-button-prev',
+            },       
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },  
+                768: {
+                    slidesPerView: 2,
+                },
+                1600: {
+                    slidesPerView: 3,
+                }
             },
-            1600: {
-                slidesPerView: 3,
-            }
-        },
-    });
-
+        });
+    }
+    catch (e) { console.log("no swiper") }
 
     /*--
         Magnific Popup Activation
     -----------------------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
-        // other options
-    });
+    try {
+        $('.video-popup').magnificPopup({
+            type: 'iframe'
+            // other options
+        });
 
-    $('.image-popup').magnificPopup({
-        type: 'image',
-        gallery:{
-          enabled:true
-        }
-    });
-	
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            gallery:{
+            enabled:true
+            }
+        });
+    }
+    catch (e) { console.log("no popup") }
 	
 	/*--
 		Back to top Script
 	-----------------------------------*/
-    $('select').niceSelect();
-
+    try {
+        $('select').niceSelect();
+    }
+    catch (e) { console.log("no niceselect") }
 
     /*--
 		Rating Script
@@ -258,11 +271,6 @@
         $('html, body').animate({
             scrollTop: 0,
         }, 1500);
-    });
-
-	  
-	
-	
-    
+    });    
     
 })(jQuery);
